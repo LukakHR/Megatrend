@@ -1,0 +1,14 @@
+<div>
+  <input type="image" id="logo" src="assets/logo.png" height="50px" width="50px" (click) = 'goHome()'/>
+  <h1>Quizzz</h1>
+  <hr />
+  <!--Ovako se mjenja kompletni sadržaj stranice-->
+  <div [ngSwitch] = "page">
+    <!--Stranica određenog kviza-->
+    <app-quiz *ngSwitchCase = "'quiz'" [quiz] = "selectedQuiz" (quizCompleted) = 'endQuiz($event)'></app-quiz>
+    <!--Stranica rezultata nakon završenog kviza-->
+    <app-result *ngSwitchCase = "'result'" [score] = "score" (backToHome) = 'goHome()'></app-result>
+    <!--Home Page odnosno lista kvizova-->
+    <app-quizes *ngSwitchDefault (startNewQuiz)='startTheQuiz($event)'></app-quizes>
+  </div>
+</div>

@@ -1,0 +1,8 @@
+<div>
+    <!--Ispisuje svako pitanje i pripadne odgovore te poziva funkciju za provjeru odgovora nakon odabira odgovora-->
+    <h1>{{ questionAsked.question }}</h1>
+    <button (click)="checkIfCorrect(0)">{{ questionAsked.answer0 }}</button>
+    <button (click)="checkIfCorrect(1)">{{ questionAsked.answer1 }}</button><br />
+    <button (click)="checkIfCorrect(2)">{{ questionAsked.answer2 }}</button>
+    <button (click)="checkIfCorrect(3)">{{ questionAsked.answer3 }}</button>
+</div>

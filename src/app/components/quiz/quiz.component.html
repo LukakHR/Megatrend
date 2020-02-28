@@ -1,0 +1,6 @@
+<div>
+    <!--Postavlja određeno pitanje i ceka signal za sljedece-->
+    <app-question [questionAsked] = "quiz.questions[i]" (questionAnswered)='nextQuestion($event)'></app-question>
+    <br />
+    <h1 [innerHTML] = "answerResponse"></h1>
+</div>
